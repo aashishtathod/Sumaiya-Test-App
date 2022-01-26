@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".MainActivity">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7">
+
+        <ImageView
+            android:id="@+id/actual_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="0dp"
+            android:scaleType="centerCrop" />
+
+        <com.contentarcade.adnan.shapedblurlibrary.view.ShapeLayout
+            android:id="@+id/shape_layout_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="10dp">
+
+            <ImageView
+                android:id="@+id/blurred_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+        </com.contentarcade.adnan.shapedblurlibrary.view.ShapeLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:weightSum="5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="3.5"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:id="@+id/radius_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Radius: " />
+
+
+                <androidx.appcompat.widget.AppCompatSeekBar
+                    android:id="@+id/blur_radius_seekbar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:progressTint="@color/purple_700"
+                    android:thumbTint="@color/purple_700"
+                    android:max="25"
+                    android:min="0" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:weightSum="10">
+
+                <TextView
+                    android:id="@+id/blur_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Blur Area: " />
+
+                <androidx.appcompat.widget.AppCompatSeekBar
+                    android:progressTint="@color/purple_700"
+                    android:thumbTint="@color/purple_700"
+                    android:id="@+id/blur_area_seekbar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:max="1000"
+                    android:min="0" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
